@@ -50,7 +50,7 @@ def analysis_4(charges_df, primary_person_df):
     return leaving_scene_count
 
 def analysis_5(primary_person_df):
-    without_females_count = primary_person_df.filter(F.col("PRSN_GNDR_ID") != "FEMALE").groupBy("DRVR_LIC_STATE_ID").count().orderBy("count", ascending=False).limit(1).collect()
+    without_females_count = primary_person_df.filter((F.col("PRSN_GNDR_ID") != "FEMALE") & (col("PRSN_GNDR_ID") != "NA")).groupBy("DRVR_LIC_STATE_ID").count().orderBy("count", ascending=False).limit(1).collect()
     
     return without_females_count[0]
 
