@@ -1,0 +1,10 @@
+input_data:
+  restrict_use: "data/Restrict_use.csv"
+  charges_use: "data/Charges_use.csv"
+  units_use: "data/Units_use.csv"
+  primary_person_use: "data/Primary_Person_use.csv"
+  damages_use: "data/Damages_use.csv"
+  endorse_use: "data/Endorse_use.csv"
+
+output_data:
+  analysis_results: "output/results.json"
